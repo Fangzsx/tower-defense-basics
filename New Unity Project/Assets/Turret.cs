@@ -20,11 +20,14 @@ public class Turret : MonoBehaviour
     //reference for the target
     public Transform target;
 
-    //tag for enemy(change in prefab)
+    //tag for enemy(change in 
     public string enemyTag = "Enemy";
 
     //part to rotate
     public Transform partToRotate;
+
+    //speed of turning
+    public float turnSpeed = 10f;
 
 
     // Start is called before the first frame update
@@ -76,7 +79,7 @@ public class Turret : MonoBehaviour
         Vector3 direction = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         //convert to eulerAngle
-        Vector3 rotation = lookRotation.eulerAngles;
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
         
     }
