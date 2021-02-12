@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
@@ -19,6 +19,8 @@ public class WaveSpawner : MonoBehaviour
     //spawn location
     public Transform spawnPoint;
 
+    public Text countdownTimer;
+
     private void Update()
     {
         if(countdown <= 0f)
@@ -29,6 +31,8 @@ public class WaveSpawner : MonoBehaviour
 
         //decrease the countdown by 1 per frame
         countdown -= Time.deltaTime;
+
+        countdownTimer.text = Mathf.Round(countdown).ToString();
     }
 
     IEnumerator SpawnWave()
