@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
         Vector3 direction = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
-        //if the actual distance <= distance this frame
+        //if the actual distance <= distance this framei
         if(direction.magnitude <= distanceThisFrame)
         {
             HitTarget();
@@ -39,6 +39,9 @@ public class Bullet : MonoBehaviour
     {
         GameObject effect = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effect, 1.5f);
+        Destroy(target.gameObject);
         Destroy(gameObject);
+        
+        
     }
 }
