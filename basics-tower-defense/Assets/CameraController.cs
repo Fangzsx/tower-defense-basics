@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
     public float panSpeed = 30f;
     public float panBorderThickness = 10f;
     public float minY = 10f;
-    public float minX = 80f;
+    public float maxY = 80f;
     private bool doMovement = true;
 
 
@@ -53,7 +53,7 @@ public class CameraController : MonoBehaviour
         Vector3 pos = transform.position;
 
         pos.y -= scroll * scrollSpeed * Time.deltaTime;
-        pos.y = Mathf.Clamp(pos.y, minX, minY);
+        pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         transform.position = pos;
 
