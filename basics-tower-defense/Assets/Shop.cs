@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   
+    public void PurchaseStandardTurret()
     {
-        
+        Debug.Log("Standard Turret Purchased!");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PurchaseAnotherTurret()
     {
-        
+        Debug.Log("Another Turret Purchased!");
     }
+
 }
