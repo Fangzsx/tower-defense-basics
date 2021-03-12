@@ -2691,17 +2691,17 @@ PrefabInstance:
     - target: {fileID: 2550900751446300425, guid: e07003696a07df8468f7e307e2bf12b5,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.r
-      value: 0.6792453
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2550900751446300425, guid: e07003696a07df8468f7e307e2bf12b5,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.g
-      value: 0.40049842
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2550900751446300425, guid: e07003696a07df8468f7e307e2bf12b5,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.b
-      value: 0.40049842
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2550900751446300436, guid: e07003696a07df8468f7e307e2bf12b5,
         type: 3}
@@ -17043,7 +17043,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
